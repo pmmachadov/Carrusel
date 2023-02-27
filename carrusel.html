@@ -12,7 +12,7 @@
     <span id="nombreImagen"></span>
     <div>
         <button onclick="retrocede()">Anterior</button>
-        <img id="imagen" alt="" src="./img/">
+        <img id="imagen" alt="" src="./img/none.jpg">
         <button onclick="avanza()">Siguiente</button>
     </div>
 
@@ -20,18 +20,18 @@
 
         const RUTA = "./img/";
         const imagenes = [
-            "imgAcuario.jpg",
-            "imgAries.jpg",
-            "imgCancer.jpg",
-            "imgCapricornio.jpg",
-            "imgEscorpio.jpg",
-            "imgGeminis.jpg",
-            "imgLeo.jpg",
-            "imgLibra.jpg",
-            "imgPiscis.jpg",
-            "imgSagitario.jpg",
-            "imgTauro.jpg",
-            "imgVirgo.jpg"
+            "Acuario.jpg",
+            "Aries.jpg",
+            "Cancer.jpg",
+            "Capricornio.jpg",
+            "Escorpio.jpg",
+            "Geminis.jpg",
+            "Leo.jpg",
+            "Libra.jpg",
+            "Piscis.jpg",
+            "Sagitario.jpg",
+            "Tauro.jpg",
+            "Virgo.jpg"
         ];
 
         let posicion = 0;
@@ -53,10 +53,11 @@
         }
 
         function mostrarImagen() {
-            let imagen = RUTA + imagenes[posicion]; // Se crea la ruta completa de la imagen a mostrar. RUTA es la constante que contiene la ruta de las imágenes, e imagenes[posicion] es el nombre de la imagen que se va a mostrar.
-            document.getElementById("imagen").src = imagen;
-            document.getElementById("nombreImagen").innerHTML = imagen;
-        }
+    let imagen = RUTA + imagenes[posicion];
+    document.getElementById("imagen").src = imagen;
+    document.getElementById("nombreImagen").innerHTML = imagenes[posicion].split(".")[0];
+}
+
 
     </script>
 </body>
